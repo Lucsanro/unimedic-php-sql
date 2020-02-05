@@ -1,0 +1,108 @@
+CREATE DATABASE banco_unimedic default character set utf8
+default collate utf8_general_ci;
+
+USE banco_unimedic;
+
+
+CREATE TABLE agenda_cirurgia (
+	id INT AUTO_INCREMENT PRIMARY KEY ,
+	nomePaciente VARCHAR(100) ,
+	procedimento VARCHAR(50) ,
+	medicoResponsa VARCHAR(100) ,
+	assistente VARCHAR(100) ,
+	salaCirurgica INT(2) ,
+	data DATE ,
+	periodo CHAR(1) ,
+	obs TEXT	
+) default charset = utf8;
+
+INSERT INTO agenda_cirurgia VALUES
+(default,'José Amaral','Extração','Natasha Gouveia','Juliano Torres',13,'2019-11-11','M','Paciente veio acompanhado');
+
+
+CREATE TABLE agenda_consultas (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nomePaciente VARCHAR(100),
+	especialidade VARCHAR(50),
+	medico VARCHAR(100),
+	atendEspecial CHAR(1),
+	Hora TIME,
+	data DATE,
+	periodo CHAR(1),
+	obs TEXT
+) default charset = utf8;
+
+INSERT INTO agenda_consultas VALUES
+(default,'Carol Santos','Clareamento','Rafael Noronha','N','10:30','2019-11-11','M','Vai pagar à vista');
+
+CREATE TABLE area_dentista(
+
+id int(4) primary key auto_increment,
+nome varchar (50),
+especialidade varchar (60),
+dataAdmissao Date ,
+dataNascimento Date,
+telCelular char (9),
+telResidencial char (9),
+email varchar(50),
+cep char(8),
+cpf varchar(12) ,
+rg varchar(12),
+obs TEXT 
+);
+
+INSERT INTO area_dentista VALUES
+(default,'Renata Malfatti','Extrair','2019-11-11','1886-03-20',999199119,25552552,'ren@mal.com','08880880','68998689696','355355355','tem experiência');
+
+CREATE TABLE estacionamento (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	placa VARCHAR(9) UNIQUE,
+	fabricante VARCHAR(30),
+	modelo VARCHAR(20),
+	cor VARCHAR(20),
+	anoFabricacao INT(4),
+	anoModelo INT(4) ,
+	obs TEXT	
+);
+
+INSERT INTO estacionamento VALUES
+(default,'FLA-2019','Nissan','Skyline GT-R','Preto',2015,2015,'Carro da
+
+ Natasha');
+
+CREATE TABLE empresas (
+codEmpresa INT PRIMARY KEY AUTO_INCREMENT,
+nomeEmpresa VARCHAR(100),
+cnpj VARCHAR(20),
+numContrato INT,
+dataContrato DATE,
+vencContrato DATE,
+obs TEXT
+);
+
+INSERT INTO empresas VALUES
+(default,'ClinicSuper','0001100099911999','1777','2019-11-11','2020-11-11','Todas as clausulas ok');
+
+CREATE TABLE beneficiario (
+	id INT PRIMARY KEY AUTO_INCREMENT ,
+	nomePaciente VARCHAR(100) ,
+	email VARCHAR(256) ,
+	sexo VARCHAR(10) ,
+	ddd INT(2) ,
+	telefone INT(9) ,
+	cpf INT(11) ,
+	convenio VARCHAR(55) ,
+	nascimento DATE ,
+	rg INT(9) ,
+	estadoCivil VARCHAR(10) ,
+	nacionalidade VARCHAR(20) ,
+	obs TEXT	
+);
+
+INSERT INTO beneficiario VALUES
+(default,'Tiffany 
+
+Arruda','tif22@hot.com','Feminino',11,988898889,444994494,'ClinicSuper','1997-10-31',156655665,'Solteiro','Brasileiro','Pagará tudo em dinheiro vivo');
+
+show tables;
+
