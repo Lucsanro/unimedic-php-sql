@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Agendamento de Cirúrgias</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="css/agenda.css">
+	</head>
+	
+	<body 	oncontextmenu="return false"
+			ondragstart="return false"
+			onselectstart="return false">
+
+		<div id="formCorpo">
+			<h1 id="titulo">Agendamento Cirúrgico</h1> <hr>
+		
+			<form	action="gravar_cirurgia.php"
+					method="post"> <br>
+				
+				<p><label for="paciente">Paciente:<span class="corVermelha">*</span></label> <br>
+				<input	type="text"	name="nomePaciente"
+						id="paciente" maxlength="80"
+						size="80" required></p> <br>
+						
+				<p><label for="cirurgia">Procedimento:<span class="corVermelha">*</span></label> <br>
+				<input	type="text"	name="procedimento"
+						id="cirurgia" maxlength="50"
+						size="55" required list="proced"></p> <br>
+						
+				<datalist id="proced">
+					<option value="Clareamento"></option>
+					<option value="Extração"></option>
+					<option value="Implante"></option>
+					<option value="Limpeza"></option>
+					<option value="Prótese Dentária"></option>
+				</datalist>
+					
+				<p><label for="medico">Médico responsável:<span class="corVermelha">*</span></label> <br>
+				<input	type="text"	name="medicoResponsa"
+						id="medico"	maxlength="80"
+						size="80" required></p> <br>
+				
+				<p><label for="assistente">Assistente:</label> <br>
+				<input	type="text"	name="assistente"
+						id="assistente" maxlength="80"
+						size="80"></p> <br>
+				
+				<p><label for="sala">Sala Cirúrgica/Consultório:<span class="corVermelha">*</span></label>
+				<input	type="number"	name="salaCirurgica"
+						id="sala"	maxlength="2"
+						min="1" max="30" required><p> <br>
+						
+				<p><label for="data">Data:<span class="corVermelha">*</span></label>
+				<input	type="date"	name="data"
+						id="data" required><p> <br>
+				
+				<p>Periodo:
+				<input type="radio"	name="periodo"
+				id="manha" value="M" checked> <label for="manha">Manhã</label>
+				
+				<input type="radio"	name="periodo"
+				id="tarde" value="T"> <label for="tarde">Tarde</label><p> <br>
+				
+				<p>Observações: <br>
+				<textarea	type="text"
+							name="obs"
+							id="obs"
+							maxlength="500"
+							placeholder="Insira eventuais observações aqui"></textarea> <p> <br>
+						
+				<input id="envio" class="btn btn-green" type="submit" value="Confirmar">
+				
+				<input id="limpar" class="btn btn-red" type="reset" value="Resetar Dados">
+			</form>
+		</div>
+	</body>
+</html>

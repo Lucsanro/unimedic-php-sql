@@ -1,0 +1,94 @@
+body {
+	margin: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px ;
+}
+	
+	/*----- CONFIGURAÇÃO DA DIV FORMCORPO -----*/
+
+div#formCorpo {
+	border	:	1px solid black;
+	width	:	775px;
+	height	:	930px;
+	margin	:	0px auto;
+	padding-left	:	15px;
+	padding-right	:	15px;
+	font-Family	:	Arial ;
+	box-shadow: 2px 2px 10px #000000;
+	border-radius: 8px 8px 8px 8px ;
+	background-color : rgb(230,247,179);
+}
+
+	/*----- ELEMENTOS DO FORMÚLARIO -----*/
+
+input {
+	padding-left	:	5px;
+	border-radius	:	5px 5px 5px 5px;	
+}
+
+textarea {
+	padding	:	5px;
+	border-radius	:	5px 5px 5px 5px;
+	resize	: none;
+}
+
+input:focus {
+	border 	: 2px solid rgb(194, 211, 209);
+	outline : none ;
+}
+
+textarea:focus {
+	border 	: 1px solid rgb(194, 211, 209);
+	outline : none ;
+}
+
+input#sala {
+	width	:	50px;	
+}
+
+textarea#obs {
+	height	:	100px;
+	width	:	500px;
+}
+
+span.corVermelha {
+	color 	:	#ff0000; 
+}
+
+/*--- CONFIGURAÇÃO DOS BOTÕES DE ENVIO E RESET DE DADOS ---*/
+
+input.btn {
+	font-family	: Arial ;
+	cursor		: pointer ;
+	outline		: none ;
+}
+
+/*----- BOTÃO VERDE -----*/
+
+input#envio{
+	width:150px;
+	height:35px;
+	border : none;
+	font-size : 17px;
+	border-radius : 20px 20px 20px 20px ;
+	-moz-border-radius : 20px 20px 20px 20px ;
+	-webkit-border-radius : 20px 20px 20px 20px ;
+}					
+
+input.btn-lightblue {
+	background	: rgb(65, 185, 231);
+	color 		: #000000 ;
+	box-shadow	: 0 5px 0 rgb(23, 143, 189);
+}
+
+input.btn-lightblue:hover {
+	background	: rgb(23, 143, 189);
+	color 		: #000000 ;
+	box-shadow	: 0 5px 0 rgb(17, 102, 134);
+}
+
+input.btn-lightblue:active {
+	position	: relative ;
+	top			: 5px ;
+	box-shadow	: none ;
+}
